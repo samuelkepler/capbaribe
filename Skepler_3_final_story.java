@@ -95,6 +95,7 @@ public class Skepler_3_final_story {
                 System.out.println();
                 System.out.println("- Capivara");
                 System.out.println("- Anta.");
+                escolha = ler.nextLine();
 
                 if(escolha.equals("capivara")){
 
