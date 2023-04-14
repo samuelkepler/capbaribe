@@ -1,10 +1,10 @@
 public class Personagem {
     String nome;
-    int mana;
+    int energia;
 
     public Personagem(String nome) {
         this.nome = nome;
-        this.mana = 1000;
+        this.energia = 1000;
     }
 
     public Personagem(String nome, int energia) {

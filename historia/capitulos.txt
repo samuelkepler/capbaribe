@@ -1,0 +1,82 @@
+Introdução:
+
+
+Capitulo 1 :Prologo
+
+"-------------------Prólogo-------------------" 
+"Em um local remoto ( na nascente do Capibaríbe ) onde o vento faz a curva e as vacas produziam leite em pó "
+"de tão seco que era é a sua nascente (a serra do Jacarará)  antes da existencia do rio ( a qual existirá," 
+"logo mais, se você fizer as escolhas corretas),existe um heroi ou uma heroina que esta, a espera de" 
+"sua nova aventura. A muito tempo os deuses do Capibaribe, Cap e Baribe, queriam dar uma bença ao povo" 
+"de Jacarará, logo  escolheram, um cabloco para ser seu heroi e receber a bença de fazer o rio Capibaribe" 
+"nascer, lhe deram três desafios para serem cumpridos durante aquela noite. Lhe fizeram apracer na começo" 
+"da serra do Jacarará e o mandaram subir até o cume onde lá receberia a gota d'água que ao tocar o" 
+"chão a preencheria e a inundaria até onde os olhos não podessem mais enxegar ( e não, não é de poluição)"
+
+
+
+"Ele subiu parte da serra e olhou de lado e viu um nin de Mary-bonds, mas este nin preenchia" 
+"todo o caminho que ele teria adiante, em sua,frente apareceu uma tocha dada por Cap, o deus da "
+"turbulencia do rio, você tem três opções"
+
+Escolhas:
+ - [Fogo]. você botará fogo com a tocha em todo o caminho"
+ - [Correr]. escolhe correr entre o nin de Mary-bonds, até chegar no fim da trilha"
+ - [Outro caminho] . Você ira pela trilha incerta que se encontra ao lado, com luzes amigaveis e tranquilidade 
+ e pássaros Cantando "
+
+
+Capitulo 1.1:
+" Ao punhá fogo nos Mary-Bons (james, james bond), um incendio se principia na floresta, levnatando um fogo" 
+"enorme, que unido a carne dos Mary-bonds, desfolega o caboclo e o mata desfolegado "
+
+Capitulo 1.2:
+"Ao correr entre os mary-bonds, você toma velocidade e se adianta a três segundos deles, por se atrasarem para" 
+"sair de seus nin."
+
+Capitulo 1.3:
+"Ao escolher outro caminho o caboclo não percebe que estava tudo calmo, pelo simples causo de que ninguém" 
+"sem embrenhava ali e ao fazer isso uma pedra de badoque o atinge na testa o matando"
+
+
+Capitulo 2:
+"Ligeiramnete o mesmo enxerga com os zoi, o riacho que fica no pé da serra, o unico lugar que todos pegavam "
+"água e precisavam descer toda serra diariamente para isso, e onde ninguém tomava banho por ser o lugar" 
+"onde se culhia água, E a esquerda uma caverna escura e estranha onde nem o cabra mais macho se arriscava" 
+"a entrar"
+
+Escolhas:
+"- [rio]. Pular no rio e nadar até os Mary-Bonds lhe esquecerem."
+"- [caverna]. Entrar na caverna escura e fugir pelo escuro onde os Mary-bonds não podem lhe ver";
+
+
+Capitulo 3:
+"Ao pular no rio os Mary-Bonds não se arriscaram a ir atrás do caboclo, como se uma enrgia protegesse as "
+"águas e assim eles o deixaram em paz,Ao chegar ao outro lado do rio, o mesmo chega todo enxarcado, e" 
+"nota o céu começar clarear, subindo para a margem, suas roupas começam a secar e unidas ao seu suor uma bolha"
+"do tamanho de um limão do mato se forma em sua mão a preenchendo e a voz  do deus Baribe, senhor das "
+"capivaras ecoa em sua cabeça: Esta é a semnete que fará nascer a água para o povo de Jacarará, agora está na" 
+"hora de enfrentar seu ultimo desafio, scolha bem, pois lhe resta pouco tempo para o amanhecer. "
+"Na frente do caboclo aparece uma Capivara e uma Anta para montar e subir o resto da serra. Você Escolherá: "
+
+"- [Capivara]"
+"- [Anta]."
+
+Capitulo 3.1:
+" A Anta era uma anta, que o leva pelos caminhos mais perigosos, o fazendo enfrentar os bichos e passagens" 
+"mais perigosas, pondo a vida do caboclo em risco e o fazendo, chegar quase morto no topo da Serra," 
+"além de faze-lo chegar após o nascer do Sol, tornando com que a semente em uma pedra, sem utilidade"
+"______________________________ Perdesse a xinxa _________________________"
+
+Capitulo Final:
+" Ao montar em sua Capivara, rapidamente ela subiu o monte, o levando pelo caminho mais seguro e mais rapido 
+"até o alto da Serra onde ao descer dela a semente brilou em sua mão e ao abrir para ver a mesma, 
+"ela flutuou até o chão e uma tremedeira que foi da serra até o mar, cortando todo estado de Pernambuco
+"fazendo com que água brotasse do chão e um rio nascesse, com varios braços de nascente."
+
+Capitulo de Épilogo:
+"Épilogo"
+ "Sem conta que o primeiro terremoto do Brasil foi nesse dia, e não se viu tremor maior e mais abençoado que 
+ "este desde então"
+ "______________________________ Fim _________________________"
+   

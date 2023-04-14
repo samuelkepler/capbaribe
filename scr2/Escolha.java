@@ -1,5 +1,5 @@
 public class Escolha {
-    string texto;
+    String texto;
     Capitulo capituloEscolhido;
 
     public Escolha(String texto, Capitulo capituloEscolhido) {
