@@ -4,7 +4,6 @@ public class Skepler_3_final_story {
     public static void main(String[] args) throws Exception {
         Scanner ler = new Scanner(System.in);
         String nome;
-        String escolha;
 
     // Introdução da Historia //
 
