@@ -88,6 +88,7 @@ public class Skepler_3_final_story {
 
             System.out.println(textoCapitulo2);
             String escolha_1_Capituo2 = " - Rio. Pular no rio e nadar até os Mary-Bonds lhe esquecerem.";
+
             String escolha_2_Capituo2 = " - Caverna. Entrar na caverna escura e fugir pelo escuro onde os Mary-bonds não podem lhe ver";
             System.out.println(escolha_1_Capituo2);
             System.out.println(escolha_2_Capituo2);
@@ -126,17 +127,70 @@ public class Skepler_3_final_story {
 
                 if (escolha.equals("capivara")) {
 
-                    String textoFnalCerto = "Ao montar em sua Capivara, rapidamente ela subiu o monte, o levando pelo caminho mais seguro e mais rapido até o alto da Serra onde ao descer"
-                            +
-                            "dela a semente brilou em sua mão e ao abrir para ver a mesma, ela flutuou até o chão e uma tremedeira que foi da serra até o mar, cortando todo estado de Pernambuco"
-                            +
-                            "fazendo com que água brotasse do chão e um rio nascesse, com varios braços de nascente."
-                            +
-                            "\n \n ---------------------Épilogo-------------------"
-                            +
-                            "\n \n Se conta que o primeiro terremoto do Brasil foi nesse dia, e não se viu tremor maior e mais abençoado que este desde então"
-                            +
-                            "\n \n ______________________________ Fim _________________________";
+        String textoFnalCerto = "Ao montar em sua Capivara, rapidamente ela subiu o monte, o levando pelo caminho mais seguro e mais rapido até o alto da Serra onde ao descer"
+                +
+                "dela a semente brilou em sua mão e ao abrir para ver a mesma, ela flutuou até o chão e uma tremedeira que foi da serra até o mar, cortando todo estado de Pernambuco"
+                +
+                "fazendo com que água brotasse do chão e um rio nascesse, com varios braços de nascente."
+                +
+                "\n \n ---------------------Épilogo-------------------"
+                +
+                "\n \n Se conta que o primeiro terremoto do Brasil foi nesse dia, e não se viu tremor maior e mais abençoado que este desde então"
+                +
+                "\n \n ______________________________ Fim _________________________";
+
+
+
+
+                
+        // EXECUÇÃO //
+        System.out.println(prologo);
+
+        System.out.println("Jovem viajante, qual o seu nome ? \n ");
+        nome = ler.nextLine();
+        System.out.println(" \n Muito prazer, " + nome + ", jovem aventureiro \n");
+
+        System.out.println(textoCapitulo1);
+        System.out.println(escolha_1_Capituo1);
+        System.out.println(escolha_2_Capituo1);
+        System.out.println(escolha_3_Capituo1);
+
+        String escolha = ler.nextLine();
+
+        if (escolha.equals("fogo")) {
+            System.out.println(errada_1_1);
+
+        } else if (escolha.equals("outro caminho")) {
+            System.out.println(errada_1_3);
+
+        }
+
+        // Segunda ávore de escolhas //
+
+        else if (escolha.equals("correr")) {
+
+            System.out.println(textoCapitulo2);
+            System.out.println(escolha_1_Capituo2);
+            System.out.println(escolha_2_Capituo2);
+
+            escolha = ler.nextLine();
+
+            // Terecira ávore de escolhas //
+
+            if (escolha.equals("caverna")) {
+
+                System.out.println(errada_2_2);
+
+            } else if (escolha.equals("rio")) {
+
+                System.out.println(textoCapitulo3);
+
+                System.out.println(escolha_1_Capituo3);
+                System.out.println(escolha_2_Capituo3);
+
+                escolha = ler.nextLine();
+
+                if (escolha.equals("capivara")) {
 
                     System.out.println(textoFnalCerto);
 
@@ -163,7 +217,6 @@ public class Skepler_3_final_story {
             System.out.println("Respota Invalida ");
         }
 
-        escaneador.close();
         ler.close();
     }
 }
