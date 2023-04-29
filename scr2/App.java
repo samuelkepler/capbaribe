@@ -124,10 +124,6 @@ public class App {
                 nome = ler.nextLine();
                 System.out.println(" \n Muito prazer, " + nome + ", jovem aventureiro \n");
 
-                System.out.println(textoCapitulo1);
-                System.out.println(escolha_1_Capituo1);
-                System.out.println(escolha_2_Capituo1);
-                System.out.println(escolha_3_Capituo1);
 
                 String escolha = ler.nextLine();
 
