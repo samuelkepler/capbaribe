@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import javax.xml.transform.Source;
@@ -5,21 +6,22 @@ import javax.xml.transform.Source;
 public class Capitulo {
     String nome;
     String texto;
-    String[] escolhas;
+    ArrayList<Escolha> escolhas;
     Personagem personagem;
     int mudarEnergia;
     Scanner ler;
 
-    Capitulo(String nome, String texto,
-            String[] escolhas, Personagem personagem,
+    Capitulo(String nome,
+            String texto,
+            Personagem personagem,
             int mudarEnergia,
             Scanner ler) {
         this.nome = nome;
         this.texto = texto;
-        this.escolhas = escolhas;
         this.personagem = personagem;
         this.mudarEnergia = mudarEnergia;
         this.ler = ler;
+        this.escolhas = new ArrayList<Escolha>();
 
     }
 
@@ -27,38 +29,36 @@ public class Capitulo {
         System.out.println("---------------------------");
         System.out.println(this.nome);
         System.out.println(this.texto);
-        this.personagem.mudarEnergia((this.mudarEnergia));
+        this.personagem.mudarEnergia(this.mudarEnergia);
 
-        if (this.escolhas != null) {
-            for (String escolha : escolhas) {
+        if (this.escolhas.size() > 0) {
+            for (Escolha escolha : escolhas) {
 
-                System.out.println((escolha));
+                System.out.println(escolha.texto);
             }
+            System.out.println();
+
+            int idEscolha = escolher();
+            this.escolhas.get(idEscolha).proximo.mostrar();
         }
-        System.out.println();
+
     }
 
     int escolher() {
 
-        
         int idEscolha = -1;
 
-        if (escolhas != null ) 
-        {
-            while (idEscolha == -1) 
-            {  
+        if (escolhas != null) {
+            while (idEscolha == -1) {
                 System.out.print("Digite uma escolha valida mermão: ");
                 String escolhaDigitada = ler.nextLine();
 
-                for (int i = 0; i < escolhas.length; i++) {
-                     if (escolhaDigitada.equals(escolhas[i])) 
-                    {
-                    idEscolha = i;
+                for (int i = 0; i < escolhas.size(); i++) {
+                    if (escolhaDigitada.equals(escolhas.get(i).texto)) {
+                        idEscolha = i;
                     }
                 }
 
-                
-                 
             }
 
         }

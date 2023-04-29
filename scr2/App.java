@@ -9,8 +9,7 @@ public class App {
                 Personagem zeca = new Personagem("Zeca Calango", 500);
                 Personagem delegadoAssuncao = new Personagem("Delegado asunção", 2000);
 
-
-                // INTRODUÇÃO DA HISTORIA //
+                // INTRODUÇÃO DA HISTORIA 🪶 //
 
                 Capitulo prologo = new Capitulo("-------------------Prólogo-------------------",
 
@@ -31,30 +30,31 @@ public class App {
                                                 +
                                                 " enxegar ( e não, não é de poluição) ",
 
-                                null, zeca, 0, ler);
+                                zeca, 0, ler);
 
                 // EXPLICAÇÃO E CAP 1 🥇//
                 Capitulo capitulo1 = new Capitulo("\n \n  -----------------------Cap 1--------------------",
-                                                       "\n\n  Ele subiu parte da serra e olhou de lado e viu um nin de Mary-bonds, mas este nin preenchia "+
-                                                       "todo o caminho que ele"
-                                                        +
-                                                        "teria adiante, em sua"
-                                                        +
-                                                        "\n frente apareceu uma tocha dada por Cap, o deus  da turbulencia do rio, você tem três opções: ",
+                                "\n\n  Ele subiu parte da serra e olhou de lado e viu um nin de Mary-bonds, mas este nin preenchia "
+                                                +
+                                                "todo o caminho que ele"
+                                                +
+                                                "teria adiante, em sua"
+                                                +
+                                                "\n frente apareceu uma tocha dada por Cap, o deus  da turbulencia do rio, você tem três opções: ",
 
-                                                        new String[]{"fogo","correr","outro caminho"}, zeca, 0, ler);
+                                zeca, 0, ler);
 
                 Capitulo errada_1_1 = new Capitulo("  \n --------PICADA MORTAL \n ",
                                 "Ao punhá fogo nos Mary-Bons ( james, james bond), um incendio se principia na floresta, levnatando um fogo enorme"
                                                 +
                                                 " que unido a carne dos Mary-bonds, desfolega o caboclo e o mata desfolegado",
-                                null, zeca, 0, ler);
+                                zeca, 0, ler);
 
                 Capitulo errada_1_3 = new Capitulo("\n ------FACIL DEMAIS ---- \n",
                                 " Ao escolher outro caminho o caboclo não percebe que estava tudo calmo, pelo simples causo de que ninguém sem embrenhava ali e ao fazer isso uma pedra "
                                                 +
                                                 " de badoque o atinge na testa o matando",
-                                null,  zeca, 0, ler);
+                                zeca, 0, ler);
 
                 // CPITULO 2 🥈//
 
@@ -69,22 +69,21 @@ public class App {
                                                 "\n nem o cabra mais macho se arriscava a entrar"
                                                 +
                                                 "\n \n Você ira?",
-                                                new String[]{"rio",
-                                "caverna"},
-                                 zeca, -100, ler);
 
-                Capitulo errada_2_2 = new Capitulo("\n--- CUTUCANDO ONÇA COM VARA CURTA ---\n",
+                                zeca, -100, ler);
+
+                Capitulo errada_2_1 = new Capitulo("\n--- CUTUCANDO ONÇA COM VARA CURTA ---\n",
                                 "Ao se embrenhar na caverna, mal sabia que ali durmia a onça mais braba de todo Jacarará, "
                                                 +
                                                 "a Onça Xinxa, onde ao bater nela no escuro leva uma "
                                                 +
                                                 "botada e é devorado",
-                                null, zeca, 0, ler);
+                                zeca, 0, ler);
 
                 // CAPITULO 3 🥉//
 
                 Capitulo capitulo3 = new Capitulo("\n \n  ---------------------Cap 3-------------------",
-                                                " Ao pular no rio os Mary-Bonds não se arriscaram a ir atrás do caboclo, como se uma enrgia protegesse as "
+                                " Ao pular no rio os Mary-Bonds não se arriscaram a ir atrás do caboclo, como se uma enrgia protegesse as "
                                                 +
                                                 "águas e assim eles o deixaram em paz "
                                                 +
@@ -96,7 +95,8 @@ public class App {
                                                 +
                                                 "\n escolha bem, pois lhe resta pouco tempo para o amanhecer. Na frente do caboclo aparece uma Capivara e uma Anta para montar e subir o resto da serra."
                                                 +
-                                                "\n \n Você Escolherá:",new String[]{"anta", "capivara"}, zeca, -50, ler);
+                                                "\n \n Você Escolherá:",
+                                zeca, -50, ler);
 
                 // CAPITULO FINAL CORRETO 😊 //
 
@@ -112,7 +112,7 @@ public class App {
                                                 "\n \n Se conta que o primeiro terremoto do Brasil foi nesse dia, e não se viu tremor maior e mais abençoado que este desde então"
                                                 +
                                                 "\n \n ______________________________ Fim _________________________",
-                                null,  zeca, 60, ler);
+                                zeca, 60, ler);
 
                 // CAPITULO FINAL CORRETO 😒 //
 
@@ -124,48 +124,32 @@ public class App {
                                                 "semente em uma pedra, sem utilidade"
                                                 +
                                                 "\n \n______________________________ Perdesse a xinxa _________________________",
-                                null, zeca, -300, ler);
+                                zeca, -300, ler);
 
-                // EXECUÇÃO //
+                // ESCOLHAS 📃//
+
+                // R CAP 1
+                
+                capitulo1.escolhas.add(new Escolha("fogo", errada_1_1));
+                capitulo1.escolhas.add(new Escolha("correr", capitulo2));
+                capitulo1.escolhas.add(new Escolha("outro caminho", errada_1_3));
+
+                // R CAP 2
+
+                capitulo2.escolhas.add(new Escolha("caverna", errada_2_1));
+                capitulo2.escolhas.add(new Escolha("rio", capitulo3));
+
+                // R CAP 3
+                capitulo3.escolhas.add(new Escolha("capivara", capituloFinal));
+                capitulo3.escolhas.add(new Escolha("anta", capituloFinalErrado));
+
+                Capitulo raiz = capitulo1;
+
+                // EXECUÇÃO 🖥️//
                 prologo.mostrar();
 
-                capitulo1.mostrar();
-                int escolha = capitulo1.escolher();
+                raiz.mostrar();
+                ler.close();
 
-                if (escolha == 0) {
-                        errada_1_1.mostrar();
-
-                } else if (escolha == 2) {
-                        errada_1_3.mostrar();
-
-                        // Segunda ávore de escolhas //
-
-                } else if (escolha == 1) {
-
-                        capitulo2.mostrar();
-                        escolha = capitulo2.escolher();
-
-                        if (escolha == 1) {
-                                errada_2_2.mostrar();
-
-                        } else if (escolha == 0) {
-
-                                capitulo3.mostrar();
-                                escolha = capitulo3.escolher();
-
-                                if (escolha == 0) {
-
-                                        capituloFinalErrado.mostrar();
-
-                                } else if (escolha == 1) {
-                                        capituloFinal.mostrar();
-                                }
-
-                        }
-
-                     
-
-                }  ler.close();
-
-        } 
+        }
 }
