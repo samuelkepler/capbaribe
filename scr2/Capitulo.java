@@ -6,10 +6,10 @@ import javax.xml.transform.Source;
 public class Capitulo {
     String nome;
     String texto;
-    ArrayList<Escolha> escolhas;
     Personagem personagem;
     int mudarEnergia;
     Scanner ler;
+    ArrayList<Escolha> escolhas;
 
     Capitulo(String nome,
             String texto,
