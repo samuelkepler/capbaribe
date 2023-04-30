@@ -1,0 +1,11 @@
+PERSONAGEM
+NOME:
+Zeca Calango
+EMERGIA:
+500
+
+PERSONAGEM
+Delegado Asunção
+EMERGIA:
+500
+

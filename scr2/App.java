@@ -7,7 +7,7 @@ public class App {
                 Scanner ler = new Scanner(System.in);
 
                 Personagem zeca = new Personagem("Zeca Calango", 500);
-                Personagem delegadoAssuncao = new Personagem("Delegado asunção", 2000);
+                Personagem delegadoAssuncao = new Personagem("Delegado asunção", 800);
 
                 // INTRODUÇÃO DA HISTORIA 🪶 //
 
