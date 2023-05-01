@@ -1,14 +1,14 @@
 public class Personagem {
-    String nome;
-    int energia;
+    private String nome;
+    private int energia;
 
-    Personagem(String nome, int energia) 
+    public Personagem(String nome, int energia) 
     {
         this.nome = nome;
         this.energia = energia;
     }
     
-    void mudarEnergia(int mudarEnergia)
+    public void mudarEnergia(int mudarEnergia)
     {
         this.energia = this.energia + mudarEnergia;
 

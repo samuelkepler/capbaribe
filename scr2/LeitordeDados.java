@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class LeitordeDados {
 
-    HashMap<String, Personagem> lerPersonagens(String caminhoArquivoPersonangens) {
+    public HashMap<String, Personagem> lerPersonagens(String caminhoArquivoPersonangens) {
 
         HashMap<String, Personagem> personagens = new HashMap<String, Personagem>();
         File arquivoPersonagens = new File(caminhoArquivoPersonangens);
@@ -17,11 +17,9 @@ public class LeitordeDados {
             String linhaEscaneada = "";
             int energiaPersonagem = 0;
 
-            while (lerArquivoPersonagens.hasNextLine()) 
-            {
+            while (lerArquivoPersonagens.hasNextLine()) {
 
-                while (!linhaEscaneada.equals("PERSONAGEM")) 
-                {
+                while (!linhaEscaneada.equals("PERSONAGEM")) {
 
                     linhaEscaneada = lerArquivoPersonagens.nextLine();
                 }
@@ -34,18 +32,16 @@ public class LeitordeDados {
             }
 
             lerArquivoPersonagens.close();
-        } catch (FileNotFoundException exception) 
-        {
+        } catch (FileNotFoundException exception) {
             exception.printStackTrace();
         }
         return personagens;
     }
 
-    HashMap<String, Capitulo> lerCapitulos(
-                            String caminhoArquivoCapitulos,
-                            HashMap<String, Personagem> personagens, 
-                            Scanner lerConsole) 
-    {
+    public HashMap<String, Capitulo> lerCapitulos(
+            String caminhoArquivoCapitulos,
+            HashMap<String, Personagem> personagens,
+            Scanner lerConsole) {
         HashMap<String, Capitulo> capitulos = new HashMap<String, Capitulo>();
         File arquivoCapitulos = new File(caminhoArquivoCapitulos);
 
@@ -54,85 +50,72 @@ public class LeitordeDados {
 
             String linhaEscaneada = "";
 
-            while (lerArquivoCapitulos.hasNextLine()) 
-            {
+            while (lerArquivoCapitulos.hasNextLine()) {
 
-                while (!linhaEscaneada.equals("CAPITULO") &&
-                       !linhaEscaneada.equals("ESCOLHA") ) 
-                {
+                while (!linhaEscaneada.equals("CAPITULO__COM_IMAGEM") &&
+                        !linhaEscaneada.equals("CAPITULO") &&
+                        !linhaEscaneada.equals("ESCOLHA")) {
 
                     linhaEscaneada = lerArquivoCapitulos.nextLine();
                     
+
                 }
-                if(linhaEscaneada.equals("CAPITULO"))
-                    {
-                        lerCapitulo(personagens, 
-                                    lerConsole, 
-                                    capitulos,
-                                    lerArquivoCapitulos);
-                        //linhaEscaneada = "";
-                       }
-                       else if(linhaEscaneada.equals("ESCOLHA")){
-       
-                           lerEscolhas(capitulos, lerArquivoCapitulos);
-                           //linhaEscaneada = "";
-                        }
+                if (linhaEscaneada.equals("CAPITULO__COM_IMAGEM")) {
+
+                    CapituloImagem capitulo = new CapituloImagem(
+                            personagens,
+                            lerConsole,
+                            lerArquivoCapitulos);
+
+                    capitulos.put(capitulo.getTitulo(), capitulo);
+
+                    linhaEscaneada = "";
+                }
+                if (linhaEscaneada.equals("CAPITULO")) {
+
+                    Capitulo capitulo = new Capitulo(
+                            personagens,
+                            lerConsole,
+                            lerArquivoCapitulos);
+
+                    capitulos.put(capitulo.getTitulo(), capitulo);
+
+                    linhaEscaneada = "";
+                } else if (linhaEscaneada.equals("ESCOLHA")) {
+
+                    lerEscolhas(capitulos, lerArquivoCapitulos);
+                    linhaEscaneada = "";
+                }
             }
             lerArquivoCapitulos.close();
-        } catch (FileNotFoundException exception) 
-        {
+        } catch (FileNotFoundException exception) {
             exception.printStackTrace();
         }
         return capitulos;
     }
 
-    private void lerCapitulo(HashMap<String, Personagem> personagens, Scanner lerConsole,
-            HashMap<String, Capitulo> capitulos, Scanner lerArquivoCapitulos) {
-        String nomeCapitulo;
-        String textoCapitulo;
-        String nomePersonagem;
-        int variacaoEenergia;
-        String linhaEscaneada;
-        linhaEscaneada = lerArquivoCapitulos.nextLine();// NOME
-        nomeCapitulo = lerArquivoCapitulos.nextLine();
-        linhaEscaneada = lerArquivoCapitulos.nextLine();// TEXTO
-        textoCapitulo =lerArquivoCapitulos.nextLine();
-        linhaEscaneada = lerArquivoCapitulos.nextLine();// NOME
-        nomePersonagem = lerArquivoCapitulos.nextLine();
-        linhaEscaneada = lerArquivoCapitulos.nextLine();
-        variacaoEenergia = Integer.parseInt(lerArquivoCapitulos.nextLine());
-        capitulos.put(nomeCapitulo,new Capitulo(nomeCapitulo, 
-                                               textoCapitulo, 
-                                               personagens.get(nomePersonagem), 
-                                               variacaoEenergia, 
-                                               lerConsole));
-
-    }
-
-    private void lerEscolhas(HashMap<String, Capitulo> capitulos, 
-                             Scanner lerArquivoCapitulos) {
+    private void lerEscolhas(HashMap<String, Capitulo> capitulos,
+            Scanner lerArquivoCapitulos) {
 
         String nomeCapituloOrigem;
         String textoEscolha;
         String nomeCapituloDestino;
-        int variacaoEenergia;
+        int variacaoEnergia;
         String linhaEscaneada;
+        
         linhaEscaneada = lerArquivoCapitulos.nextLine();// NOME
         nomeCapituloOrigem = lerArquivoCapitulos.nextLine();
         linhaEscaneada = lerArquivoCapitulos.nextLine();// TEXTO
-        textoEscolha =lerArquivoCapitulos.nextLine();
+        textoEscolha = lerArquivoCapitulos.nextLine();
         linhaEscaneada = lerArquivoCapitulos.nextLine();// NOME
         nomeCapituloDestino = lerArquivoCapitulos.nextLine();
-        
-
 
         Capitulo capituloOrigem = capitulos.get(nomeCapituloOrigem);
         Capitulo capituloDestino = capitulos.get(nomeCapituloDestino);
-        capituloOrigem.escolhas.add(new Escolha(textoEscolha, capituloDestino));
+        capituloOrigem.adicionarEscolha(new Escolha(textoEscolha, capituloDestino));
         // PODE SER ASSIM TAMBÉM
-        //capitulos.get(nomeCapituloOrigem).escolhas.add
-        //( new Escolha(textoEscolha, capitulos.get(nomeCapituloDestino)));
-        
+        // capitulos.get(nomeCapituloOrigem).escolhas.add
+        // ( new Escolha(textoEscolha, capitulos.get(nomeCapituloDestino)));
 
     }
 
